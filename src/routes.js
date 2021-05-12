@@ -1,11 +1,13 @@
 export const paths = {
+  // eslint-disable-next-line no-undef
+  ROOT : appConfig.rootPath,
   HOME : 'home',
   DOCUMENTS : 'documents'
 }
 
 const routes = {
-  HOME : `/${paths.HOME}`,
-  DOCUMENTS : `/${paths.DOCUMENTS}`,
+  HOME : `${paths.ROOT}/${paths.HOME}`,
+  DOCUMENTS : `${paths.ROOT}/${paths.DOCUMENTS}`,
 }
 export const breadcrumbs = [
   {
