@@ -39,6 +39,7 @@
       "/node_modules/(?!antd|@ant-design|rc-.+?|@babel/runtime).+(js|jsx)$"
     ]
   },
+  "homepage" : "https://madelavega.github.io/react17-antd/",
   "browserslist": {
     "production": [
       ">0.2%",
