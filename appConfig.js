@@ -3,6 +3,8 @@ const env = process.env.NODE_ENV,
   endpoints = loadEnvFile('services'),
   rootPath = process.env.PUBLIC_URL || '';
 
+console.log(process.env)
+
 module.exports = {
   endpoints,
   rootPath

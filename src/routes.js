@@ -4,10 +4,10 @@ export const paths = {
   HOME : 'home',
   DOCUMENTS : 'documents'
 }
-
+console.log(appConfig.rootPath)
 const routes = {
-  HOME : `${paths.ROOT}/${paths.HOME}`,
-  DOCUMENTS : `${paths.ROOT}/${paths.DOCUMENTS}`,
+  HOME      : `/${paths.ROOT}/${paths.HOME}`,
+  DOCUMENTS : `/${paths.ROOT}/${paths.DOCUMENTS}`,
 }
 export const breadcrumbs = [
   {
