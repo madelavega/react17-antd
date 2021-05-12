@@ -2,7 +2,7 @@
 
 A small React v17/Redux application with Ant Design framework.
 
-It has two pages:
+The application is deployed in <a href="https://madelavega.github.io/react17-antd/" target="_blank">react17-antd</a>, and it has two views:
  - Home: default/entry page (/ and /home paths). It has a link to the main page (documents)
  - Documents: main page (/documents path)
 
