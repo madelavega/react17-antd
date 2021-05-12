@@ -24,7 +24,7 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "craco build",
+    "build": "PUBLIC_URL=/react17-antd craco build",
     "test": "craco test",
     "eject": "craco eject"
   },
@@ -39,7 +39,6 @@
       "/node_modules/(?!antd|@ant-design|rc-.+?|@babel/runtime).+(js|jsx)$"
     ]
   },
-  "homepage" : "/react17-antd/",
   "browserslist": {
     "production": [
       ">0.2%",
