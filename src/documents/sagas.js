@@ -54,7 +54,9 @@ export const createDocument = function* (action) {
   }
 };
 
-export default [
+const sagas = [
   takeLatest(actions.loadDocumentsRequest.asyncAction(), loadDocuments),
   takeLatest(actions.createDocument.asyncAction(), createDocument),
 ];
+
+export default sagas;

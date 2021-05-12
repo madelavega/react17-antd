@@ -13,9 +13,9 @@ const genAction = (actionPrefix, action) => `${actionPrefix}_${action}`,
  * @param {string} actionBase base of the action to be enhance
  * @returns {{requestDoneAction(*), action: string, requestFailedAction(*)}}
  */
-export default (prefix, actionBase) => {
+const actionGenerator = (prefix, actionBase) => {
   if(!prefix) {
-    throw 'Empty prefix is not allowed. Please, send a prefix for your action (for example, the name of the related component)';
+    throw new Error('Empty prefix is not allowed. Please, send a prefix for your action (for example, the name of the related component)');
   }
   const action = genAction(prefix, actionBase);
   return {
@@ -25,3 +25,5 @@ export default (prefix, actionBase) => {
     asyncFailedAction : asyncFailedAction(action),
   };
 };
+
+export default actionGenerator;

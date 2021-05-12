@@ -6,6 +6,10 @@ The application is deployed in <a href="https://madelavega.github.io/react17-ant
  - Home: default/entry page (/ and /home paths). It has a link to the main page (documents)
  - Documents: main page (/documents path)
 
+##CI/CD 
+
+CI/CD is available using GitHub Actions when changes are detected in master branch. The pipeline runs the tests and deploy the applicaiton it they finish successfully.
+
 ## Local installation
 
 ### Requeriments

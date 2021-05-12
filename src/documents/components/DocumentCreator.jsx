@@ -36,6 +36,7 @@ const List = ({
     } else if(creating === null) {
       nameFile.current.focus();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [creating]);
 
   return (

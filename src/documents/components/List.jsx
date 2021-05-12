@@ -65,6 +65,7 @@ const List = ({
 
   useEffect(() => {
       loadDocuments?.(filters);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filters]);
 
   const onPageChange = (page, pageSize) => {
