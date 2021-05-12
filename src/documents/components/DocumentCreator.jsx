@@ -1,5 +1,5 @@
-import React, { useEffect, createRef } from 'react';
-import {Input, Form, Button, Col, Row, Card, notification } from 'antd';
+import React, { useEffect, createRef, useState } from 'react';
+import {Input, Form, Button, Col, Row, Card, notification, Tooltip } from 'antd';
 import {PlusOutlined} from '@ant-design/icons';
 
 const {Item : FormItem} = Form;
@@ -12,6 +12,7 @@ const List = ({
   }) => {
 
   const [form] = Form.useForm(),
+       [creatingDocument, setCreatingDocument] = useState(false),
 
         nameFile = createRef(),
 
@@ -24,8 +25,17 @@ const List = ({
           });
         },
 
+        valueChange = ({target}) => {
+          if(target?.value?.length) {
+            setCreatingDocument(true);
+          } else {
+            setCreatingDocument(false);
+          }
+        },
+
         onFinish = (document) => {
           createDocument(document);
+          setCreatingDocument(false);
           form.resetFields();
         };
 
@@ -45,12 +55,14 @@ const List = ({
         <Row>
           <Col flex="auto">
             <FormItem name={['document', 'documentName']} label="Doc. Name" style={{width: "50%", marginBottom: '0px'}}>
-              <Input ref={nameFile} placeholder="New document..."/>
+              <Input ref={nameFile} onChange={valueChange} placeholder="New document..."/>
             </FormItem>
           </Col>
           <Col>
             <FormItem style={{marginBottom: '0px'}}>
-              <Button type="primary" loading={creating || false /*null protection*/} icon={<PlusOutlined/>} htmlType="submit">Add New</Button>
+              <Tooltip placement="left" title={creatingDocument ? 'Save the new document' : 'Type the document name to enable this button'}>
+                <Button disabled={!creatingDocument} type="primary" loading={creating || false /*null protection*/} icon={<PlusOutlined/>} htmlType="submit">Add New</Button>
+              </Tooltip>
             </FormItem>
           </Col>
         </Row>
