@@ -28,7 +28,7 @@ CI/CD is available using GitHub Actions when changes are detected in master bran
 
 ### Requeriments
 
-- npm v7+ (Recomended if you want to use npm workspaces to work in your local environment with the app and its dependency as we see later)
+- npm v6+ 
 - node v14+ (to change node version, I recommend to use node version manager <a href="https://github.com/nvm-sh/nvm" target="_blank">nvm</a>
 
 ```
