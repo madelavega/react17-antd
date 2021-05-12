@@ -33,7 +33,7 @@ const List = ({
           }
         },
 
-        onFinish = (document) => {
+        onFinish = ({document}) => {
           createDocument(document);
           setReadyToSave(false);
           form.resetFields();

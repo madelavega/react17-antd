@@ -71,7 +71,7 @@ export const actionCreators = {
    */
   createDocument: (document) => ({
     type   : actions.createDocument.asyncAction(),
-    payload: document,
+    payload: { document },
   }),
 
   /**

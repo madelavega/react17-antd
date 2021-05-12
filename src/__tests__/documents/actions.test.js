@@ -48,7 +48,7 @@ describe('Documents actions', () => {
       type   : actions.createDocument.asyncAction(),
       payload,
     };
-    expect(actionCreators.createDocument(payload)).toEqual(expectedAction);
+    expect(actionCreators.createDocument(payload.document)).toEqual(expectedAction);
   });
 
   it('should create an action to manage documents creation success callback', () => {
