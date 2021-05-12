@@ -24,7 +24,7 @@
   },
   "scripts": {
     "start": "craco start",
-    "build": "PUBLIC_URL=/react17-antd craco build",
+    "build": "PUBLIC_URL=react17-antd craco build",
     "test": "craco test",
     "eject": "craco eject"
   },
