@@ -5,8 +5,8 @@ export const paths = {
   DOCUMENTS : 'documents'
 }
 const routes = {
-  HOME      : `/${paths.ROOT}/${paths.HOME}`,
-  DOCUMENTS : `/${paths.ROOT}/${paths.DOCUMENTS}`,
+  HOME      : `${paths.ROOT}/${paths.HOME}`,
+  DOCUMENTS : `${paths.ROOT}/${paths.DOCUMENTS}`,
 }
 export const breadcrumbs = [
   {
