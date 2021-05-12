@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/documents/components/index.css"],"names":[],"mappings":"AAAA,cACI,uBACJ,CAEA,mBACI,2DACJ","file":"main.0025fafc.chunk.css","sourcesContent":[".filter-title {\n    padding: 12px 5px 0px 16px;\n}\n\n.ant-layout-slider {\n    box-shadow: 2px 2px 3px 0px #9b9b9b2e;\n}"]}
