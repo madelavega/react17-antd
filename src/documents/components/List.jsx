@@ -87,6 +87,7 @@ const List = ({
       </Row>
       <Row>
         <Table
+          data-testid="documents-list"
           style={{paddingTop: 16}}
           loading={loading}
           rowKey="id"

@@ -55,13 +55,13 @@ const List = ({
         <Row>
           <Col flex="auto">
             <FormItem name={['document', 'documentName']} label="Doc. Name" style={{width: "50%", marginBottom: '0px'}}>
-              <Input ref={nameFile} onChange={valueChange} placeholder="New document..."/>
+              <Input data-testid="new-document-input" ref={nameFile} onChange={valueChange} placeholder="New document..."/>
             </FormItem>
           </Col>
           <Col>
             <FormItem style={{marginBottom: '0px'}}>
               <Tooltip placement="left" title={readyToSave ? 'Save the new document' : 'Type the document name to enable this button'}>
-                <Button disabled={!readyToSave} type="primary" loading={creating || false /*null protection*/} icon={<PlusOutlined/>} htmlType="submit">Add New</Button>
+                <Button data-testid="save-document" disabled={!readyToSave} type="primary" loading={creating || false /*null protection*/} icon={<PlusOutlined/>} htmlType="submit">Add New</Button>
               </Tooltip>
             </FormItem>
           </Col>

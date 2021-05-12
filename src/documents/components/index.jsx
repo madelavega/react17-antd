@@ -39,7 +39,6 @@ const Documents = ({
       <Content>
         <Layout>
           <PageHeader
-            className="site-page-header"
             title="Document Browser"
             breadcrumb={breadcrumb}
           />
