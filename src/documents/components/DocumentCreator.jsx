@@ -12,7 +12,7 @@ const List = ({
   }) => {
 
   const [form] = Form.useForm(),
-       [creatingDocument, setCreatingDocument] = useState(false),
+       [readyToSave, setReadyToSave] = useState(false),
 
         nameFile = createRef(),
 
@@ -27,15 +27,15 @@ const List = ({
 
         valueChange = ({target}) => {
           if(target?.value?.length) {
-            setCreatingDocument(true);
+            setReadyToSave(true);
           } else {
-            setCreatingDocument(false);
+            setReadyToSave(false);
           }
         },
 
         onFinish = (document) => {
           createDocument(document);
-          setCreatingDocument(false);
+          setReadyToSave(false);
           form.resetFields();
         };
 
@@ -60,8 +60,8 @@ const List = ({
           </Col>
           <Col>
             <FormItem style={{marginBottom: '0px'}}>
-              <Tooltip placement="left" title={creatingDocument ? 'Save the new document' : 'Type the document name to enable this button'}>
-                <Button disabled={!creatingDocument} type="primary" loading={creating || false /*null protection*/} icon={<PlusOutlined/>} htmlType="submit">Add New</Button>
+              <Tooltip placement="left" title={readyToSave ? 'Save the new document' : 'Type the document name to enable this button'}>
+                <Button disabled={!readyToSave} type="primary" loading={creating || false /*null protection*/} icon={<PlusOutlined/>} htmlType="submit">Add New</Button>
               </Tooltip>
             </FormItem>
           </Col>
