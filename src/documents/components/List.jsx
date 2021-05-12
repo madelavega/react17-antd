@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import {Button, Card, Col, Select, Row, Table, Typography} from 'antd';
 import moment from 'moment';
+import routes from '../../routes';
 
 const columns = [
   {
@@ -12,13 +13,13 @@ const columns = [
     title: 'Document Name',
     ellipsis: true,
     dataIndex: 'documentName',
-    render: documentName => <a href="/#">{documentName}</a>,
+    render: documentName => <a href={`${routes.DOCUMENTS}`}>{documentName}</a>,
     width: 200
   },
   {
     title: 'Group',
     dataIndex: 'group',
-    render: group => <a href="/#">{group}</a>,
+    render: group => <a href={`${routes.DOCUMENTS}`}>{group}</a>,
     width : 50,
     sorter: ({group: a = ''}, {group: b= ''}) => a.localeCompare(b),
     sortDirections: ['descend', 'ascend'],
@@ -48,7 +49,7 @@ const columns = [
   {
     title: 'Address',
     dataIndex: 'address',
-    render: address => <a href="/#">{address}</a>,
+    render: address => <a href={`${routes.DOCUMENTS}`}>{address}</a>,
     width : 150,
   },
 ],
